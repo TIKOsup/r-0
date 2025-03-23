@@ -89,16 +89,17 @@ export default function GreatHouses() {
 function House({ data }) {
   return (
     <Box display="flex">
-      <Box>
+      <Box display="flex" justifyContent="center" alignItems="center" sx={{margin: "0 12px"}}>
         <img
-          width="220px"
+          height="120px"
+          width="120px"
           src={data.img}
           alt={data.name}
         />
       </Box>
-      <Box sx={{margin: "10px"}}>
-        <Typography variant="h3">{data.name}</Typography>
-        <Typography variant="body1" sx={{marginTop: "10px"}}>{data.desc}</Typography>
+      <Box sx={{margin: "12px"}}>
+        <Typography variant="h5" component="h2">{data.name}</Typography>
+        <Typography variant="body1" sx={{marginTop: "10px"}} color="textSecondary">{data.desc}</Typography>
       </Box>
     </Box>
   );
